@@ -1,5 +1,8 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 
+[![CircleCI](https://circleci.com/gh/aosfandres/SOTELO-ARWS-T2.svg?style=svg&circle-token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)](https://app.circleci.com/pipelines/github/aosfandres/SOTELO-ARWS-T2)
+
+
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://sotelo-arsw-t2.herokuapp.com/)
 
 ## Preparación para el Parcial
