@@ -4,6 +4,13 @@ public class Wind {
     private double speed;
     private double deg;
 
+    
+    /*
+     * Constructor para data 
+     * 
+     * @param speed
+     * @param deg
+     */
     public Wind(double speed, double deg) {
         this.speed = speed;
         this.deg = deg;

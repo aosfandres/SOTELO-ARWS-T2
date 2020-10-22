@@ -7,7 +7,16 @@ public class Weather {
 
     public Weather() {
     }
-
+    
+    
+    /*
+     * Constructor para data 
+     * 
+     * @param id
+     * @param main
+     * @param description
+     */
+    
     public Weather(int id, String main, String description) {
         this.id = id;
         this.main = main;

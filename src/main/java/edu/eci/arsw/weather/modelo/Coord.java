@@ -7,6 +7,12 @@ public class Coord {
     public Coord() {
     }
 
+    /*
+     * Constructor para data
+     * 
+     * @param lon
+     * @param lat
+     */
     public Coord(double lon, double lat) {
         this.lon = lon;
         this.lat = lat;

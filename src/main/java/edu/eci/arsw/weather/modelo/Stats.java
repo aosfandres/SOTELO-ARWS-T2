@@ -7,7 +7,15 @@ public class Stats {
     private double pressure;
     private double humidity;
 
-
+    /*
+     * Constructor para data
+     * 
+     * @param temperature
+     * @param minTemperature
+     * @param maxTemperature  
+     * @param presure
+     * @param humidity
+     */
     public Stats(double temperature, double minTemperature, double maxTemperature, double presure, double humidity) {
         this.temp = temperature;
         this.temp_min = minTemperature;

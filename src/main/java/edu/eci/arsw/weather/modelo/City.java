@@ -12,8 +12,20 @@ public class City {
     private int visibility;
     private int cod;
 
+    /*
+     * Constructor para data
+     * 
+     * @param coord
+     * @param clouds
+     * @param Stats  
+     * @param weather
+     * @param wind
+     * @param name
+     * @param timezone
+     * @param visibility
+     * @param cod
+     */
     
-
     public City(Coord coord, Clouds clouds, Stats Stats, Weather weather, Wind wind, String name, int timezone, int visibility, int cod) {
         this.coord = coord;
         this.clouds = clouds;
