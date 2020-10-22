@@ -1,9 +1,15 @@
 # Escuela Colombiana de Ingeniería Julio Garavito - Arquitecturas de Software ARSW - Parcial Segundo Tercio
 
+
+
+## Para tener en cuenta: 
+- CircleCI
 [![CircleCI](https://circleci.com/gh/aosfandres/SOTELO-ARWS-T2.svg?style=svg&circle-token=fa8c51f3bedd926b133267148a5e3c22e1617f4a)](https://app.circleci.com/pipelines/github/aosfandres/SOTELO-ARWS-T2)
 
-
+- Heroku
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://sotelo-arsw-t2.herokuapp.com/)
+
+Funcionamiento: en algun momento la app en heroku no hacia bien la parte de selccionar en el mapa la localizacion de la ciudad pero basta con refrescar (igualmente la app de manera local esta funcionando normal).
 
 ## Preparación para el Parcial
 
