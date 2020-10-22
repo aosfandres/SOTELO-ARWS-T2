@@ -9,5 +9,4 @@ import java.util.List;
 
 public interface WeatherService {
     City getStatsByCity(String name) throws UnirestException;
-}
- 
+} 

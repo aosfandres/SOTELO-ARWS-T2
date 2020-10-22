@@ -17,7 +17,7 @@ public class WeatherServiceImpl implements WeatherService {
     private HTTPWeatherService weatherService;
     @Override
     public City getStatsByCity(String name) throws UnirestException {
-    	City ciudad = new City();
+    	City cityWeather = new City();
         JSONObject object = weatherService.getWeatherByCity(name);
         Coord coord = formatObject("coord",object,Coord.class);
         Clouds clouds = formatObject("clouds",object,Clouds.class);
@@ -25,19 +25,21 @@ public class WeatherServiceImpl implements WeatherService {
         JSONObject objectWeather = object.getJSONArray("weather").getJSONObject(0);
         Weather weather = mapWeather(objectWeather);
         Wind wind = formatObject("wind",object,Wind.class);
-        setCityWeatherStats(ciudad,wind,coord,clouds,mainStats,weather,object);
-        return ciudad;
+        setCityWeatherStats(cityWeather,wind,coord,clouds,mainStats,weather,object);
+        return cityWeather;
     }
-    private void setCityWeatherStats(City ciudad,Wind wind, Coord coord, Clouds clouds, Stats mainStats, Weather weather, JSONObject object) {
-    	ciudad.setCoord(coord);
-    	ciudad.setWeather(weather);
-    	ciudad.setWind(wind);
-    	ciudad.setMainStats(mainStats);
-    	ciudad.setClouds(clouds);
-    	ciudad.setName(object.getString("name"));
-    	ciudad.setTimezone(object.getInt("timezone"));
-    	ciudad.setCod(object.getInt("cod"));
-    	ciudad.setVisibility(object.getInt("visibility"));
+    
+    private void setCityWeatherStats(City cityWeather,Wind wind, Coord coord, Clouds clouds, Stats mainStats, Weather weather, JSONObject object) {
+        cityWeather.setCoord(coord);
+        cityWeather.setWeather(weather);
+        cityWeather.setWind(wind);
+        cityWeather.setMainStats(mainStats);
+        cityWeather.setClouds(clouds);
+        cityWeather.setName(object.getString("name"));
+        cityWeather.setTimezone(object.getInt("timezone"));
+        cityWeather.setCod(object.getInt("cod"));
+        cityWeather.setVisibility(object.getInt("visibility"));
+
     }
     private Weather mapWeather(JSONObject objectWeater) {
         Gson gson = new Gson();
