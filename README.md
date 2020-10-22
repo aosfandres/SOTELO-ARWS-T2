@@ -11,6 +11,8 @@
 
 Funcionamiento: en algun momento la app en heroku no hacia bien la parte de selccionar en el mapa la localizacion de la ciudad pero basta con refrescar (igualmente la app de manera local esta funcionando normal).
 
+la aplicacion no muestra los todos los datos que se traen de la api por que fallaba al tratar de generar un tabla muy grande, asi que en la tabla se imprimen datos mas relevantes :)
+
 ## Preparación para el Parcial
 
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
