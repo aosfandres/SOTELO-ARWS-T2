@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 
 
 @Service
-public class WeatherStatsServiceImpl implements WeatherService {
+public class WeatherServiceImpl implements WeatherService {
     @Autowired
     private HTTPWeatherService weatherService;
     @Override
@@ -24,22 +24,21 @@ public class WeatherStatsServiceImpl implements WeatherService {
         Stats mainStats = formatObject("main",object,Stats.class);
         JSONObject objectWeather = object.getJSONArray("weather").getJSONObject(0);
         Weather weather = mapWeather(objectWeather);
-        setCityWeatherStats(ciudad,coord,clouds,mainStats,weather,object);
-        return null;
+        Wind wind = formatObject("wind",object,Wind.class);
+        setCityWeatherStats(ciudad,wind,coord,clouds,mainStats,weather,object);
+        return ciudad;
     }
-    
-    private void setCityWeatherStats(City ciudad, Coord coord, Clouds clouds, Stats mainStats, Weather weather, JSONObject object) {
-    	//settear modelos
+    private void setCityWeatherStats(City ciudad,Wind wind, Coord coord, Clouds clouds, Stats mainStats, Weather weather, JSONObject object) {
     	ciudad.setCoord(coord);
     	ciudad.setWeather(weather);
+    	ciudad.setWind(wind);
     	ciudad.setMainStats(mainStats);
     	ciudad.setClouds(clouds);
     	ciudad.setName(object.getString("name"));
     	ciudad.setTimezone(object.getInt("timezone"));
-        ciudad.setCod(object.getInt("cod"));
-        ciudad.setVisibility(object.getInt("visibility"));
+    	ciudad.setCod(object.getInt("cod"));
+    	ciudad.setVisibility(object.getInt("visibility"));
     }
-
     private Weather mapWeather(JSONObject objectWeater) {
         Gson gson = new Gson();
         return gson.fromJson(objectWeater.toString(),Weather.class);

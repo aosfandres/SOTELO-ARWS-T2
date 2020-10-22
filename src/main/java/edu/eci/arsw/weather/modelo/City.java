@@ -3,18 +3,18 @@ package edu.eci.arsw.weather.modelo;
 public class City {
 
     private Coord coord;
-    private String name;
-    private int timezone;
     private Clouds clouds;
     private Stats Stats;
-    private int visibility;
-    private int cod;
     private Weather weather;
     private Wind wind;
- 
-   
+    private String name;
+    private int timezone;
+    private int visibility;
+    private int cod;
 
-    public City( Stats Stats, Weather weather, Wind wind, String name, int timezone, Coord coord, Clouds clouds, int visibility, int cod) {
+    
+
+    public City(Coord coord, Clouds clouds, Stats Stats, Weather weather, Wind wind, String name, int timezone, int visibility, int cod) {
         this.coord = coord;
         this.clouds = clouds;
         this.Stats = Stats;

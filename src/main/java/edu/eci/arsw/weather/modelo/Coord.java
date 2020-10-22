@@ -1,31 +1,30 @@
 package edu.eci.arsw.weather.modelo;
 
 public class Coord {
-	
-    private double longitud;
-    private double latitud;
+    private double lon;
+    private double lat;
 
     public Coord() {
     }
 
-    public Coord(double longitud, double latitud) {
-        this.longitud = longitud;
-        this.latitud = latitud;
+    public Coord(double lon, double lat) {
+        this.lon = lon;
+        this.lat = lat;
     }
 
-    public double getLongitud() {
-        return longitud;
+    public double getLon() {
+        return lon;
     }
 
-    public void setLongitud(double longitud) {
-        this.longitud = longitud;
+    public void setLon(double lon) {
+        this.lon = lon;
     }
 
-    public double getLatitud() {
-        return latitud;
+    public double getLat() {
+        return lat;
     }
 
-    public void setLat(double latitud) {
-        this.latitud = latitud;
+    public void setLat(double lat) {
+        this.lat = lat;
     }
 }

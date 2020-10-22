@@ -6,4 +6,4 @@ import org.json.JSONObject;
 public interface HTTPWeatherService {
     public JSONObject getWeatherByCity(String name) throws UnirestException;
 }
-
+ 

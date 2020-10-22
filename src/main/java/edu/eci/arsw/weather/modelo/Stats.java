@@ -1,7 +1,6 @@
 package edu.eci.arsw.weather.modelo;
 
 public class Stats {
-	
     private double temp;
     private double temp_min;
     private double temp_max;
@@ -16,7 +15,6 @@ public class Stats {
         this.pressure = presure;
         this.humidity = humidity;
     }
-    
     public Stats() {
     }
     public double getTemp() {

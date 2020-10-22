@@ -1,21 +1,20 @@
 package edu.eci.arsw.weather.modelo;
 
 public class Clouds {
-    
-	private int clouds;
+    private int all;
 
     public Clouds() {
     }
 
-    public Clouds(int clouds) {
-        this.clouds = clouds;
+    public Clouds(int all) {
+        this.all = all;
     }
 
-    public int getClouds() {
-        return clouds;
+    public int getAll() {
+        return all;
     }
 
-    public void setClouds(int clouds) {
-        this.clouds = clouds;
+    public void setAll(int all) {
+        this.all = all;
     }
 }

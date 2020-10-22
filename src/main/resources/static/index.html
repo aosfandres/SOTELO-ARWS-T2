@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<html>
+    <head>
+    
+        <title>Weather</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="/webjars/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/app.js"></script>
+        <link rel="stylesheet"
+              href="/webjars/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!--          <meta charset="UTF-8">
   <title>Weather layer</title>
   <style>
     html, body{
@@ -173,11 +184,49 @@
   google.maps.event.addDomListener(window, 'load', initialize);
     
   
-</script>
-</head>
-<body>
-
-<div id="map-canvas"></div>
-
-</body>
+</script> -->
+    </head>
+    
+    <body>
+    <div class="row" style="margin-top: 50px;margin-left:3rem; margin-right: 3rem">
+        <div class="container">
+           <H1 align="center"> Weather </H1>
+        </div>
+    </div>
+    
+    <div class="container register mt-4">
+                <form>
+                    <div>
+						<label for="nombre">CITY:</label> 
+						<input type="text" id="city"	name="nombre" placeholder="Enter City...">
+						<button type="button" class="btn btn-primary" onclick="app.getCity(city.value)">Get Weather</button>
+					</div>
+                </form>
+    </div>
+           
+        <div class="container register mt-4">
+        
+        
+        <div class="grid-item">
+		<h2>Weather:</h2>
+		<table class="table ">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">City/Country</th>
+	                <th scope="col">Timezone</th>
+	                <th scope="col">Visibility</th>
+	                <th scope="col">Weather State</th>
+	                <th scope="col">Weather Description</th>
+	                <th scope="col">temp min</th>
+	                <th scope="col">temp max</th>
+	                <th scope="col">pressure</th>
+	                <th scope="col">humidity</th>
+				</tr>
+			</thead>
+			<tbody id ="tablee"></tbody>
+		</table>
+	</div>
+	
+    </div>
+    </body>
 </html>
